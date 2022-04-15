@@ -23,6 +23,6 @@ td {
   width: 50px;
 }
 
-#key-BS {
-  /* width: 10px; */
+td:hover {
+  opacity: 0.5;
 }
