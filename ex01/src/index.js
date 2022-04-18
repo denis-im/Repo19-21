@@ -27,7 +27,9 @@ window.onclick = e => {
   } else if (e.target.id == "key-MINUS") {
     text.push("-");  
   } else if (e.target.id == "key-OK") {
-    text.push("&#10;");  
+    // My original implementation had new line, but should be alert
+    // text.push("&#10;");  
+    alert(document.getElementById("text-area").innerHTML);
   } else if (e.target.id.includes("key") && e.target.id.length === 5){
     text.push(e.target.innerHTML);
     (shift) ? shift = false : {};
