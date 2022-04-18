@@ -13,7 +13,11 @@ const setKeyCss = (id, css) => {
   keys.namedItem(id).sty
 }
 
-window.onclick = e => {
+window.onclick = e => handleEvent(e);
+window.ontouchstart = e => handleEvent(e);
+
+
+handleEvent = (e) => {
   if (e.target.id == "key-SHIFT") {
     shift = !shift;
   } else if (e.target.id == "key-CL") {
@@ -35,7 +39,7 @@ window.onclick = e => {
     (shift) ? shift = false : {};
   }
   redrawKeyboard();
-} 
+}
 
 const redrawKeyboard = () => {
   document.getElementById("text-area").innerHTML = text.join('');
